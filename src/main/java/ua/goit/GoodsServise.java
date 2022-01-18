@@ -20,7 +20,7 @@ public class GoodsServise {
         return result;
     }
 
-    private static int goodsCountCalc(String goods, char s){
+    private int goodsCountCalc(String goods, char s){
         long result =  goods.chars().filter(ch -> ch == s).count();
         return (int)result;
     }
