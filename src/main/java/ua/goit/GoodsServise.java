@@ -3,11 +3,11 @@ package ua.goit;
 // typo Service
 public class GoodsServise {
 
-    //Upper case means the variable should be a constant
-    private Good A = new Good(1.25f, 3, 3.00f);
-    private Good B = new Good(4.25f);
-    private Good C = new Good(1.00f, 6, 5.00f);
-    private Good D = new Good(0.75f);
+    //Upper case means the variable should be a constant ---OK
+    private final Good A = new Good(1.25f, 3, 3.00f);
+    private final Good B = new Good(4.25f);
+    private final Good C = new Good(1.00f, 6, 5.00f);
+    private final Good D = new Good(0.75f);
 
     public float calculateTotalCost(String goods){
         float result = 0.0f;
