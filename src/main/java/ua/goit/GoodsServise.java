@@ -1,7 +1,9 @@
 package ua.goit;
 
+// typo Service
 public class GoodsServise {
 
+    //Upper case means the variable should be a constant
     private Good A = new Good(1.25f, 3, 3.00f);
     private Good B = new Good(4.25f);
     private Good C = new Good(1.00f, 6, 5.00f);
@@ -36,7 +38,10 @@ public class GoodsServise {
                     count--;
                 }
             }
+            // why do we need each one if instead of just if-else construction?
             if(count % promotionCount == 0){
+                // please try to write more readable code. At least add more spaces but better
+                // create separate method with meaningful mane
                 result+=count/promotionCount*promotionPrice;
             }
             return result;
