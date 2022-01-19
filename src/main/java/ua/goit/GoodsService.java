@@ -1,9 +1,9 @@
 package ua.goit;
 
-// typo Service
-public class GoodsServise {
+// typo Service DONE
+class GoodsService {
 
-    //Upper case means the variable should be a constant ---OK
+    //Upper case means the variable should be a constant DONE
     private final Good A = new Good(1.25f, 3, 3.00f);
     private final Good B = new Good(4.25f);
     private final Good C = new Good(1.00f, 6, 5.00f);
@@ -31,25 +31,27 @@ public class GoodsServise {
         if(count <= 0){
             return 0.0f;
         } else {
-            float result = 0.0f;
-            if(count % promotionCount != 0){
-                while(count % promotionCount != 0){
-                    result+= price;
-                    count--;
-                }
-            }
-            // why do we need each one if instead of just if-else construction?
-            if(count % promotionCount == 0){
-                // please try to write more readable code. At least add more spaces but better
-                // create separate method with meaningful mane
-                result+=count/promotionCount*promotionPrice;
-            }
-            return result;
+            return calculateOneGood(count, price, promotionCount, promotionPrice);
         }
     }
 
     private float calculate(int count, float price){
         return count * price;
+    }
+
+    private float calculateOneGood(int count, float price, int promotionCount, float promotionPrice){
+        float result = 0.0f;
+        while(count % promotionCount != 0){
+            result+= price;
+            count--;
+        }
+        // why do we need each one if instead of just if-else construction? DONE
+        if(count > 0 && count % promotionCount == 0){
+            // please try to write more readable code. At least add more spaces but better
+            // create separate method with meaningful mane DONE
+            result+=count/promotionCount*promotionPrice;
+        }
+        return result;
     }
 
 

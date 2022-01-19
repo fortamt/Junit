@@ -4,7 +4,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        GoodsServise goodsServise = new GoodsServise();
+        GoodsService goodsServise = new GoodsService();
         System.out.println(goodsServise.calculateTotalCost("ABCDABA"));
 
 
